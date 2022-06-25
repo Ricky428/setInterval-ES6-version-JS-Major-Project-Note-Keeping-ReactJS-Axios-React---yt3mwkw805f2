@@ -56,11 +56,14 @@ function App () {
             count += second[item];
         }
 
-        function calculate () {
-            let finalOutput = mergeString(firstName.toLowerCase(), secondName.toLowerCase());
-            setOutput(flamesArr[finalOutput])
-        }
+        return count%6;
     }
+
+    function calculate () {
+        let finalOutput = mergeString(firstName.toLowerCase(), secondName.toLowerCase());
+        setOutput(flamesArr[finalOutput]);
+    }
+    
     function clear () {
         firstName = " ";
         secondName =" ";
@@ -81,3 +84,4 @@ function App () {
 
 
 export default App;
+
