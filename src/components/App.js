@@ -3,8 +3,8 @@ import '../styles/App.css';
 
 let flamesArr = ["Siblings","Friends","Love","Affection","Marriage","Enemy"];
 function App () {
-    firstName = " ";
-    secondName =" ";
+    firstName = "";
+    secondName ="";
     const[output,setOutput] = useState('No Relatiionship');
 
     function changeHandler1 (event) {
@@ -42,7 +42,7 @@ function App () {
                 if(firstMap[first] !=0 && secondMap[second] !=0) {
                     if(secondMap[first]) {
                         firstMap[first]--;
-                        second[second]--;
+                        secondMap[first]--;
                     }
                 }
             }
@@ -73,9 +73,9 @@ function App () {
                {/* Do not remove the main div */}
                <h3 data-testid="answer">{output}</h3>
                <label>First Name:</label>
-               <input data-testid="input1" onChange={changeHandler1}/>
+               <input type="text" data-testid="input1" onChange={changeHandler1}/>
                <label>second Name:</label>
-               <input data-testid="input2"  onChange={changeHandler2}/>
+               <input type="text" data-testid="input2"  onChange={changeHandler2}/>
                <button data-testid="calculate_relationship"  onClick={calculate}>Calculate Relationship Future</button>
                <button data-testid="clear" onClick={clear}>Click</button>
             </div>
