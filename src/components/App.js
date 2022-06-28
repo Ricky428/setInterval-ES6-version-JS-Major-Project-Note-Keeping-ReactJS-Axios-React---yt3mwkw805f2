@@ -1,11 +1,11 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 
-let flamesArr = ["Siblings","Friends","Love","Affection","Marriage","Enemy"];
+const flamesArr = ["Siblings","Friends","Love","Affection","Marriage","Enemy"];
 function App () {
-    firstName = "";
-    secondName ="";
-    const[output,setOutput] = useState('No Relatiionship');
+    firstName = '';
+    secondName = '';
+    const[output,setOutput] = useState('No Relationship');
 
     function changeHandler1 (event) {
         firstName = event.target.value;
@@ -39,7 +39,7 @@ function App () {
         let count = 0;
         for(let first in firstMap) {
             for(let second in secondMap) {
-                if(firstMap[first] !=0 && secondMap[second] !=0) {
+                if(firstMap[first] !=0 && secondMap[first] !=0) {
                     if(secondMap[first]) {
                         firstMap[first]--;
                         secondMap[first]--;
@@ -53,7 +53,7 @@ function App () {
         }
 
         for(let item in secondMap) {
-            count += second[item];
+            count += secondMap[item];A
         }
 
         return count%6;
@@ -63,10 +63,10 @@ function App () {
         let finalOutput = mergeString(firstName.toLowerCase(), secondName.toLowerCase());
         setOutput(flamesArr[finalOutput]);
     }
-    
+
     function clear () {
-        firstName = " ";
-        secondName =" ";
+        firstName = '';
+        secondName ='';
     }
      return(
             <div id="main">
@@ -75,7 +75,7 @@ function App () {
                <label>First Name:</label>
                <input type="text" data-testid="input1" onChange={changeHandler1}/>
                <label>second Name:</label>
-               <input type="text" data-testid="input2"  onChange={changeHandler2}/>
+               <input type="text" data-testid="input2" onChange={changeHandler2}/>
                <button data-testid="calculate_relationship"  onClick={calculate}>Calculate Relationship Future</button>
                <button data-testid="clear" onClick={clear}>Click</button>
             </div>
@@ -84,4 +84,5 @@ function App () {
 
 
 export default App;
+
 
