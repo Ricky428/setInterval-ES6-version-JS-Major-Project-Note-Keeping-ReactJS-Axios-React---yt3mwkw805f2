@@ -19,21 +19,16 @@ function App () {
         let firstMap = {};
         let secondMap = {};
         for(let i=0; i<firstInput; i++) {
-            if(!firstMap[firstInput[i]]) {
+            if(!firstMap[firstInput[i]])
                 firstMap[firstInput[i]] = 0;
-            }
-            else {
                 firstMap[firstInput[i]] += 1;
-            }
         }
 
         for(let i=0; i<secondInput; i++) {
-            if(!secondMap[secondInput[i]]) {
+            if(!secondMap[secondInput[i]]) 
                 secondMap[secondInput[i]] = 0;
-            }
-            else {
                 secondMap[secondInput[i]] += 1;
-            }
+            
         }
 
         let count = 0;
@@ -53,13 +48,15 @@ function App () {
         }
 
         for(let item in secondMap) {
-            count += secondMap[item];A
+            count += secondMap[item];
         }
 
         return count%6;
     }
 
     function calculate () {
+        if(document.querySelector('#input1').value=0 || document.querySelector('#input2').value==0)
+            aler('Please Enter valid input')
         let finalOutput = mergeString(firstName.toLowerCase(), secondName.toLowerCase());
         setOutput(flamesArr[finalOutput]);
     }
