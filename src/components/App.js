@@ -47,7 +47,7 @@ function mergeInput(f,l) {
     let count = 0;
     for(let i in map1) {
       for(let j in map2) {
-        if(map1[i]!=0 && map2[i] !=0) {
+        if(map1[i]!=0 && map2[i]) {
           if(map2[i]) {
             map1[i]--;
             map2[i]--;
