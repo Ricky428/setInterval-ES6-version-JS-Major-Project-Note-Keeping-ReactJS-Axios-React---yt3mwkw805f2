@@ -16,11 +16,6 @@ function str2Fun (e){
   setVal2(e.target.value);
 }
 
-function calculate () {
- let map1 = {};
- let map2 = {};
-}
-
 function clear (e) {
   setDis("");
   document.getElementById("int1").value ="";
@@ -52,7 +47,7 @@ function mergeInput(f,l) {
     let count = 0;
     for(let i in map1) {
       for(let j in map2) {
-        if(map1[i]!=0 && map2[i]) {
+        if(map1[i]!=0 && map2[i] !=0) {
           if(map2[i]) {
             map1[i]--;
             map2[i]--;
@@ -99,7 +94,7 @@ function calculate () {
    <div className="buttons">
     
    <button data-testid="calculate_relationship" onClick={calculate}>Calculate Relationship Future</button>
-   <button data-testid="clear" onClick={clear} >clear</button>
+   <button data-testid="clear" onClick={clear} >Clear</button>
    </div>
 </div>
   )
